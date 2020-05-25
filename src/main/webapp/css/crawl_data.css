@@ -1,0 +1,27 @@
+.getData {
+    margin: 0 auto;
+    width: 30%;
+    height: 50%;
+    margin-top: 7%;
+    border-radius: 12px;
+    text-align: center;
+    padding-top: 12px;
+}
+
+.crawl {
+    margin-top: 18px;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.start_crawl {
+    margin: 0 auto;
+    height: 100%;
+    line-height: 35px;
+    width: 60%;
+    text-align: center;
+    background: #11298D;
+    border-radius: 5px;
+    color: white;
+}

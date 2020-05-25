@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/aop   
+       http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+	<!-- 注解扫描的包 -->
+	<context:component-scan base-package="com.panda.*">
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Service" />
+	</context:component-scan>
+
+	<!-- 启动注解驱动的Spring MVC功能，注册请求url和注解POJO类方法的映射 -->
+	<mvc:annotation-driven />
+
+	<!-- 当在web.xml 中 DispatcherServlet使用 <url-pattern>/</url-pattern> 映射时，能映射静态资源 -->
+	<mvc:default-servlet-handler />
+
+	<!-- 静态资源访问，方案1 -->
+	<mvc:resources location="/css/" mapping="/css/**" />
+	<mvc:resources location="/img/" mapping="/img/**" />
+	<mvc:resources location="/js/" mapping="/js/**" />
+
+	<!-- 默认的视图解析器 在上边的解析错误时使用 (默认使用jsp)- -->
+	<bean id="defaultViewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		p:order="1">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="contentType" value="text/html" />
+		<property name="prefix" value="/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	<!-- 配置MultipartResolver 用于文件上传 使用spring的CommosMultipartResolver -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!--  最大为100M，单位为字节   -->
+	     <property name="maxUploadSize" value="104857600"></property>      
+	     <property name="defaultEncoding" value="utf-8"></property>     
+	     <property name="maxInMemorySize" value="40960"></property>
+	</bean>
+</beans>

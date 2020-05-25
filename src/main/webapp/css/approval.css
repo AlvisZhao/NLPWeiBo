@@ -1,0 +1,102 @@
+
+/* 搜索框和按钮 */
+.searchContent{
+    width:50%;
+    width:250px;
+    height:50%;
+}
+#search{
+    position:relative;
+    width: 500px;
+    margin-top:100px;
+    margin-left: 525px;
+}
+#search input{
+    width: 200px;
+    height: 35px;
+    padding-right:100px;
+}
+#companyButton {
+    position: absolute;
+    right:30px;
+    top:5px;
+    border:none;
+    padding:0;
+    width:75px;
+    height:35px;
+}
+#projectButton {
+    position: absolute;
+    right:115px;
+    top:5px;
+    border:none;
+    padding:0;
+    width:75px;
+    height:35px;
+}
+
+/* 搜索结果展示 */
+.searchResult {
+    /* background-color: bisque; */
+    height: 555px;
+}
+table{
+    margin-left: 3%;
+    border-spacing:0px; /*设置边框的距离*/
+    border-collapse: collapse ;/*合并边框(设置了此属性 边框的距离就没用了 所以用此属性无需再设置边框距离)*/
+}
+td,th{
+    border:1px solid Black;
+}
+tr{/*设置隔行背景不同色:参数:even 表示偶数  odd  表示奇数 */
+    background-color:cadetblue;
+}
+tr:hover{
+    background-color:greenyellow;
+}
+.tbody{
+    overflow: auto;
+}
+.text{
+    display: inline-block;
+}
+
+/*详情按钮*/
+.submit{
+    background: white;
+    border-radius: 2px;
+}
+/*筛选按钮*/
+.screen{
+    background: white;
+    border-radius: 2px;
+}
+
+/*审批页面中的body样式*/
+body {
+    background-image: url("../images/searchPage.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*审批页面中的select样式*/
+.select{
+    width: 200px;
+    height: 40px;
+    display: block;
+    margin: 20px auto;
+    /*margin-left: -40%;*/
+    /*清除默认样式*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background:
+            url("../img/小箭头.png")
+            no-repeat scroll 170px center transparent;
+}
+.atrtribute{
+    display: inline-block;
+}

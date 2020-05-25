@@ -1,0 +1,195 @@
+body{
+	overflow: hidden;
+}
+/**菜单**/
+.frameMenu{
+	width: 250px;
+	background-color: #1c1c1c;
+	float: left;
+}
+.frameMenu .logo{
+	width: 100%;
+	height: 110px;
+	padding: 20px 0;
+	overflow: hidden;
+	border-bottom: 1px solid #2c3441;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+}
+.frameMenu .logo img{
+	width: 70px;
+	height: 70px;
+	background-color: #383838;
+	border-radius: 10px;
+	margin-left: 10px;
+	float: left;
+}
+.logoText{
+	height: 70px;
+	margin-left: 10px;
+	float: left;
+	color: #000000;
+}
+.logoText h1{
+	font-size: 18px;
+    font-weight: 600;
+    margin-top: 10.5px;
+}
+.logoText p{
+	display: block;
+    width: 100%;
+    height: 25px;
+    font-size: 12px;
+    white-space: nowrap;
+    line-height: 25px;
+    overflow: hidden;
+    text-align: left;
+    text-transform: Uppercase;
+    color: #000000;
+}
+
+.frameMenu .menu{
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.frameMenu .menu ul li{
+	border-bottom: 1px solid #000000;
+}
+.frameMenu .menu ul li a{
+	display: block;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	color: #000000;   /*文字颜色*/
+	padding: 0 10px 0 20px;
+	border-left: 0px solid #16A1D3;   /*移动左侧颜色*/
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+}
+.frameMenu .menu ul li a i.left{  /*左侧小图标*/
+	float: left;
+	color: #000000;
+	margin-right: 10px;
+	font-size: 18px;
+}
+.frameMenu .menu ul li a i.right{  /*右侧小按键*/
+	float: right;
+	color: #c2c2c2;
+	font-size: 12px;
+}
+.frameMenu .menu ul li a:hover{   /*移动显示颜色*/
+	background-color: #A7DCE0 !important;  /*移动显示背景色*/
+	color: #FFF;    /*移动显示文字色*/
+}
+.frameMenu .menu ul li a:hover i.left{
+	color: #FFF;   /*移动显示图标颜色*/
+}
+.frameMenu .menu ul li a:hover i.right{
+	color: #FFF;   /*移动显示右边小按键颜色*/
+}
+
+.frameMenu .menu dl{
+	display: none;
+}
+.frameMenu .menu dl li dt a{
+	display: block;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	color: #000000;   /*子目录文字颜色*/
+	padding: 0 10px 0 40px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+}
+
+/**main**/
+.main{
+	width: 250px;
+	float: left;
+}
+
+/**frameTop**/
+.frameTop{
+	width: 100%;
+	height: 50px;
+	background-color: white;  /*顶部背景颜色*/
+	/*background: -webkit-linear-gradient(
+	top,#32B5E5,#77D9E6
+	);*/
+	position: relative;
+}
+.frameTop .jt{
+	position: absolute;
+    top: 24.5px;
+    left: -6px;
+}
+.frameTop .topMenu{
+	height: 60px;
+	float: right;
+}
+.frameTop .topMenu ul{
+	overflow: hidden;
+}
+.frameTop .topMenu ul li{
+	float: left;
+	border-left: 1px solid #F4F5F6; /*个人资料和注销的分隔*/
+}
+.frameTop .topMenu ul li a{
+	padding: 0 15px;
+	height: 60px;
+	line-height: 60px;
+	display: block;
+	color: #000000;   /*顶部字体*/
+}
+.frameTop .topMenu ul li a i{
+	margin-right: 5px;
+	font-size: 14px;
+	color: #000000;  /*顶部图标*/
+}
+.frameTop .topMenu ul li a:hover{
+	color: #666;
+	background-color: #A7DCE0;  /*个人资料移动背景色*/
+}
+.frameTop .topMenu ul li a:hover i{
+	color: #666;
+}
+
+/**frameMain**/
+.frameMain{
+	width: 100%;
+	height: 60px;
+	border-left: 2px solid #A7DCE0;  /*边框颜色*/
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+}
+.frameMain .title{
+	width: 100%;
+	height: 40px;
+	background-color: #EFEFEF; /*后台首页背景横条颜色*/
+	/*background: -webkit-linear-gradient(
+	top,#32B5E5,#77D9E6
+	);*/
+}
+.frameMain .title span{
+	display: inline-block;
+	padding: 0 15px;
+	height: 39px;
+	line-height: 39px;
+	margin-top: 1px;
+	background-color: #FFF;  /*后台首页背景颜色*/
+}
+.frameMain .title span i{
+	margin-right: 10px;
+	font-size: 14px;
+}
+.frameMain .con{
+	width: 100%;
+}
+.frameMain .con iframe{
+	width: 100%;
+	overflow: hidden;
+}
